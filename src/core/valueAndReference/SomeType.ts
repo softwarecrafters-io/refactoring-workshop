@@ -1,13 +1,13 @@
 export class SomeType {
-	someField: String;
+	someField: string;
 	numbers: number[];
 	child: SomeType;
 
-	constructor () {
+	constructor() {
 		this.numbers = new Array(10).fill(0);
 	}
 
-	firstMethod(arg1: String) {
+	firstMethod(arg1: string) {
 		arg1 = "foo";
 	}
 
