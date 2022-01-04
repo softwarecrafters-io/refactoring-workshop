@@ -1,32 +1,35 @@
 import { ShoppingCart } from '../../core/implementationChange/ShoppingCart';
 
-describe('ShoppingCartShould', ()=>{
-	it('count_number_of_products', ()=>{
+describe('The Shopping Cart Should', ()=>{
+	it('counts number of products', ()=>{
 		const shoppingCart = new ShoppingCart();
 
 		shoppingCart.add(10);
 
 		expect(shoppingCart.numberOfProducts()).toBe(1);
-	})
-	it('calculate_total_price', ()=>{
+	});
+
+	it('calculates total price', ()=>{
 		const shoppingCart = new ShoppingCart();
 
 		shoppingCart.add(10);
 
 		expect(shoppingCart.calculateTotalPrice()).toBe(10);
-	})
-	it('know_when_is_discount_applicable', ()=>{
+	});
+
+	it('knows when is discount applicable', ()=>{
 		const shoppingCart = new ShoppingCart();
 
 		shoppingCart.add(100);
 
 		expect(shoppingCart.hasDiscount()).toBeTruthy();
-	})
-	it('know_when_is_not_possible_to_apply_discount', ()=>{
+	});
+
+	it('knows when is not possible to apply discount', ()=>{
 		const shoppingCart = new ShoppingCart();
 
 		shoppingCart.add(99);
 
 		expect(shoppingCart.hasDiscount()).toBeFalsy();
-	})
+	});
 })
