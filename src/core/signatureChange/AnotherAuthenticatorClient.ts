@@ -1,14 +1,12 @@
 import { AuthenticationService } from './AuthenticationService';
 
 export class AnotherAuthenticatorClient {
-
-	public unusedClientCode() {
+	unusedClientCode() {
 		try {
 			(new AuthenticationService().isAuthenticated(3545));
 		}
 		catch (e /*:Exception*/) {
 			//  ignored
 		}
-
 	}
 }
