@@ -1,20 +1,19 @@
 export class ShoppingCart {
-
 	private price: number;
 
-	public add(price: number) {
+	add(price: number) {
 		this.price = price;
 	}
 
-	public calculateTotalPrice(): number {
+	calculateTotalPrice(): number {
 		return this.price;
 	}
 
-	public hasDiscount(): boolean {
+	hasDiscount(): boolean {
 		return (this.price >= 100);
 	}
 
-	public numberOfProducts(): number {
+	numberOfProducts(): number {
 		return 1;
 	}
 }
