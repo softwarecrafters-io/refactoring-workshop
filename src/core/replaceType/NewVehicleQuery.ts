@@ -3,7 +3,7 @@ export class NewVehicleQuery {
   description: string;
 
   constructor (brand: string, description: string) {
-    this.brand = this.brand;
-    this.description = this.description;
+    this.brand = brand;
+    this.description = description;
   }
 }
