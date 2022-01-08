@@ -1,18 +1,17 @@
 export class God {
-
-  public static add(a: number, b: number): number {
+  add(a: number, b: number): number {
     return (a + b);
   }
 
-  public substract(a: number, b: number): number {
+  substract(a: number, b: number): number {
     return (a - b);
   }
 
-  public sayHello() {
+  sayHello() {
     console.log("Hello!");
   }
 
-  public sayBye() {
+  sayBye() {
     console.log("Good bye!");
   }
 }
