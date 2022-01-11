@@ -1,6 +1,6 @@
 import { UserRepository } from "../../core/dependencyChange/UserRepository";
 import { Finder } from "../../core/dependencyChange/Finder";
-import { SpecificFinder } from "../../core/dependencyChange/SpecificParser";
+import { SpecificFinder } from "../../core/dependencyChange/SpecificFinder";
 
 describe('The finder',()=>{
   it('finds users by querying profile', ()=>{
