@@ -6,7 +6,7 @@ describe('Quality calculator', ()=>{
     const calculator = new QualityCalculator();
 
     calculator.rateFacilities(Quality.Excellent);
-    calculator.rateLocation(Quality.Excellent);
+    calculator.rateLocation({quality : Quality.Excellent});
 
     expect(calculator.getScore()).toBe(12);
   })

@@ -1,23 +1,27 @@
 import { Quality } from "./Quality";
 
+interface RateLocationParams {
+  quality: string;
+}
+
 export class QualityCalculator {
 
   private score = 0;
 
-  rateLocation(quality: string) {
-    if (quality == Quality.Excellent) {
+  rateLocation(locationParams: RateLocationParams) {
+    if (locationParams.quality == Quality.Excellent) {
       this.score += 10;
     }
 
-    if (quality == Quality.Good) {
+    if (locationParams.quality == Quality.Good) {
       this.score += 7;
     }
 
-    if (quality == Quality.Bad) {
+    if (locationParams.quality == Quality.Bad) {
       this.score -= 2;
     }
 
-    if (quality == Quality.Terrible) {
+    if (locationParams.quality == Quality.Terrible) {
       this.score -= 10;
     }
   }
