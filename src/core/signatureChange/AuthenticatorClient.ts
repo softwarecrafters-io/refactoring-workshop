@@ -1,4 +1,4 @@
-import { AuthenticationService } from './AuthenticationService';
+import { AuthenticationService, Id } from './AuthenticationService';
 
 export class AuthenticatorClient {
 	private authenticationService: AuthenticationService;
@@ -7,7 +7,7 @@ export class AuthenticatorClient {
 	}
 
 	run() {
-		const authenticated: boolean = this.authenticationService.isAuthenticated(33);
+		const authenticated: boolean = this.authenticationService.isAuthenticated(Id.create(33));
 		console.log("33 is authenticated = " + authenticated);
 	}
 

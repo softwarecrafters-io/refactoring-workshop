@@ -1,14 +1,14 @@
-import { AuthenticationService } from '../../core/signatureChange/AuthenticationService';
+import { AuthenticationService, Id } from '../../core/signatureChange/AuthenticationService';
 
 describe('The authentication service', ()=>{
 	it('distinguishes the administrator role',()=>{
 		const service = new AuthenticationService()
 		const adminId = 12345;
-		expect(service.isAuthenticated(adminId)).toBeTruthy();
+		expect(service.isAuthenticated(Id.create(adminId))).toBeTruthy();
 	})
 	it('distinguishes the non-administrator role',()=>{
 		const service = new AuthenticationService()
 		const normalUserId = 11111;
-		expect(service.isAuthenticated(normalUserId)).toBeFalsy();
+		expect(service.isAuthenticated(Id.create(normalUserId))).toBeFalsy();
 	})
 })
