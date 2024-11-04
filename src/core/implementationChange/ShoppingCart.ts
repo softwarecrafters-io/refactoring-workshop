@@ -1,19 +1,19 @@
-export class ShoppingCart {
-	private price: number;
+export class ShoppingCart{
+	private priceList: number[] = [];
 
 	add(price: number) {
-		this.price = price;
+		this.priceList.push(price);
 	}
 
 	calculateTotalPrice(): number {
-		return this.price;
+		return this.priceList.reduce((previous, current)=> previous + current, 0);
 	}
 
 	hasDiscount(): boolean {
-		return (this.price >= 100);
+		return (this.calculateTotalPrice() >= 100);
 	}
 
 	numberOfProducts(): number {
-		return 1;
+		return this.priceList.length;
 	}
 }
